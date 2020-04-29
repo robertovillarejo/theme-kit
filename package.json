@@ -14,12 +14,13 @@
   "author": "Alexander Rechsteiner",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.2.1",
-    "jquery": "^3.3.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.4"
   },
   "devDependencies": {
     "autoprefixer": "*",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-postcss": "^8.0.0",

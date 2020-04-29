@@ -5,8 +5,9 @@ var gulp = require("gulp"),
   rename = require("gulp-rename"),
   postcss = require("gulp-postcss"),
   autoprefixer = require("autoprefixer");
+var browserSync = require("browser-sync").create();
 
-function buildCss() {
+gulp.task("build", () => {
   return gulp
     .src(["scss/*.scss"])
     .pipe(sourcemaps.init())
@@ -32,14 +33,25 @@ function buildCss() {
     .pipe(gulp.dest("css/"))
     .pipe(cleanCss())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("css/"));
-}
+    .pipe(gulp.dest("css/"))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
+});
 
-function watcher() {
-  gulp.watch(["scss/*.scss"], gulp.series(buildCss));
-}
+gulp.task("default", () => {
+  browserSync.init(
+    {
+      server: {
+        baseDir: process.cwd(),
+      },
+    },
+    (err) => {
+      console.error(err);
+    }
+  );
+});
 
-gulp.task("default", buildCss);
-
-exports.watch = gulp.series(buildCss, watcher);
-exports.default = gulp.series(buildCss);
+gulp.watch(["scss/*.scss"], gulp.series(["build"]));

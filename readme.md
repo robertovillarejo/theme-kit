@@ -12,7 +12,6 @@ This repository includes a project structure with a build script that builds a c
 clone this repository, run the Gulp task and go right into modifying variables and adding styles. There's also an HTML file that contains
 a neatly organized collection of Bootstrap components that fit a 1920x1080 display, so you can instantly see the outcome.
 
-
 ## Video Demonstration
 
 There is a short demonstration of this project on YouTube: [https://www.youtube.com/watch?v=Gi5ffoE3mPc](https://www.youtube.com/watch?v=Gi5ffoE3mPc)
@@ -25,13 +24,11 @@ There is a short demonstration of this project on YouTube: [https://www.youtube.
 
 ## Getting started
 
-2. Clone this repo
-3. Run `npm install`
-4. Run `gulp watch`
-4. Look at `index.html` (ideally with a [local development webserver](https://askubuntu.com/questions/377389/how-to-easily-start-a-webserver-in-any-folder))
-5. Add any Bootstrap Sass variables into `scss/_custom-variables.scss`
-6. Add any custom styles into `scss/_custom-styles.scss`. You can use Bootstrap's mixins here.
-7. Repeat steps 4 to 6 until you like what you see :-)
+1. Clone this repo
+2. Run `npm install`
+3. Run `gulp`
+4. Add any Bootstrap Sass variables into `scss/_custom-variables.scss`
+5. Add any custom styles into `scss/_custom-styles.scss`. You can use Bootstrap's mixins here.
 
 ## Creators
 
